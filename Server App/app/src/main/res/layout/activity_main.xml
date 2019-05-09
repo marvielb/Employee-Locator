@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ldcard="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.micutu.locatedriver.Views.LDCard
+                android:layout_width="361dp"
+                android:layout_height="242dp"
+                android:layout_margin="8dp"
+                ldcard:title="">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="15dp">
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <Button
+                        android:id="@+id/running_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:backgroundTint="@color/colorAccent"
+                        android:text=""
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:id="@+id/showToken_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:text="Copy Token" />
+
+                    <EditText
+                        android:id="@+id/url_EditText"
+                        android:layout_width="278dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="63dp"
+                        android:ems="10"
+                        android:hint="Site URL"
+                        android:inputType="text|textMultiLine" />
+                </RelativeLayout>
+
+            </com.micutu.locatedriver.Views.LDCard>
+
+
+            <com.micutu.locatedriver.Views.LDCard
+                android:layout_width="match_parent"
+                android:layout_height="139dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                ldcard:title="Debug">
+
+                <TextView
+                    android:id="@+id/debug_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web"
+                    android:paddingTop="8dp" />
+
+            </com.micutu.locatedriver.Views.LDCard>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
